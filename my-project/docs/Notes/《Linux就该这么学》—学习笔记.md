@@ -2,7 +2,7 @@
 
 1.Yum仓库的配置文件都以.repo结尾并存放在/etc/yum/repos.d/的目录中
 
-~~~shell
+~~~
 [rhel-media]: yum源的名称，可自定义
 baseurl=file：///media/cdrom: 提供方式包括FTP(ftp://..)、HTTP（http://.）、本地(file:///...)
 enalbed=1：设置此源是否可用，1为可用,0为禁用。
@@ -32,7 +32,7 @@ gpgkey=file:///media/cdrom/RPM-GPG-KEY-redhat-release：若为校验请指定公
 
 #### 1.echo
 
-~~~shell
+~~~
 devilper@devilper_pc:~$ echo Linux
 Linux
 devilper@devilper-pc:~$ echo $HOSTNAME
@@ -63,7 +63,7 @@ devilper-pc
 | %m   | 月份           |
 | %Y   | 完整的年份     |
 
-~~~shell
+~~~
 # 查看当前的系统时间
 devilper@devilper-PC:~$ date
 2019年 09月 17日 星期二 21:15:31 CST
@@ -100,14 +100,14 @@ devilper@devilper-PC:~$ date "+%j"
 
 #### 4.uptime(查看系统负载情况)
 
-~~~shel
+~~~
 [root@c6d479852832 /]# uptime
  14:10:49 up 3 days,  9:42,  0 users,  load average: 4.28, 4.19, 3.28
 ~~~
 
 #### 5.free(显示当前系统中内存使用情况)
 
-~~~shell
+~~~
 [root@c6d479852832 /]# free -m
               total        used        free      shared  buff/cache   available
 Mem:           7867        2538         710        2222        4618        2678
@@ -117,14 +117,14 @@ Swap:         11263         672       10591
 
 #### 6.who(查看当前登入主机的用户情况)
 
-~~~shell
+~~~
 devilper@devilper-PC:~$ who
 devilper tty1         2019-09-14 12:33 (:0)
 ~~~
 
 #### 7.last(查看所有系统的登入记录)
 
-~~~shell
+~~~
 devilper@devilper-PC:~$ last
 devilper tty1         :0               Sat Sep 14 12:33   still logged in
 reboot   system boot  4.15.0-30deepin- Sat Sep 14 12:28   still running
@@ -160,7 +160,7 @@ wtmp begins Wed Sep 11 23:10:20 2019
 
 #### 9.tr(用于转换文本文件中的字符,格式为:"tr[原是字符]\[目标字符]")
 
-~~~shell
+~~~
 [root@c6d479852832 opt]# cat tr.txt | tr[a-z] [A-Z]
 ~~~
 
@@ -180,7 +180,7 @@ wtmp begins Wed Sep 11 23:10:20 2019
 | -f        | 指定显示的列数        |
 | -c        | 单位改为字符          |
 
-~~~shell
+~~~
 # 获取root用户的默认SHELL解释器
 [root@c6d479852832 opt]# grep ^root /etc/passwd | cut -d: -f7
 /bin/bash
@@ -343,7 +343,7 @@ wtmp begins Wed Sep 11 23:10:20 2019
 | -prune             | 忽略某个文件                                                 |
 | --exec{}\;         | 后面可接对搜索到结果进一步处理的命令                         |
 
-~~~shell
+~~~
 #搜索在/etc/中所有以host开头的文件
 [root@linuxprobe~]# find /etc -name "host*" -print
 ~~~
@@ -352,7 +352,7 @@ wtmp begins Wed Sep 11 23:10:20 2019
 
 #### 1.管道符
 
-~~~shell
+~~~
 # 统计所有不允许登录系统的用户个数
 [root@linuxprobe~]# grep "/sbin/nologin" /etc.passwd | wc-l
 ~~~
