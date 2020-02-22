@@ -1,4 +1,4 @@
-## pycharm 使用docker 环境
+## 							pycharm 使用docker 环境
 
 1.创建或拉取docker镜像
 

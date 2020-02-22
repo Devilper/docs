@@ -1,4 +1,4 @@
-## 内网穿透工具--FRP
+## 							内网穿透工具--FRP
 
 #### 1.安装
 
@@ -68,6 +68,13 @@ custom_domains = **.**.com
 http_user = ***
 # 设置认证的密码
 http_pwd = ***
+
+# rtsp视频流转发
+[rtsp]
+type = tcp
+local_ip = aaa.aaa.aaa.aaa  #摄像头ip，可以指向非自身的ip哦
+local_port = 554   #rtsp端口
+remote_port = 6001 #远端访问端口
 ~~~
 
 ​	客户端启动命令
@@ -86,7 +93,11 @@ ssh -oPort=6000 mike@4.3.2.1
 # 4.3.2.1  公网IP
 ~~~
 
+​    rtsp流外网播放
 
+~~~
+rtsp://xxx.xxx.xxx.xxx:6001/streaming/101
+~~~
 
 #### 3.通过systemctl控制启动
 

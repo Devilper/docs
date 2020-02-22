@@ -1,4 +1,4 @@
-## rdesktop使用准则
+## 							rdesktop使用准则
 
 ~~~shell
 rdesktop ip // 打开一个8彩色位的
