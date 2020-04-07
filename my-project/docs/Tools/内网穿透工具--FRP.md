@@ -10,7 +10,7 @@
  mv frp_0.15.1_linux_amd64 frp
 ~~~
 
-#### 2.FRP 服务端配置
+#### 2.FRP 服务端配置(外网服务器)
 
 ​	修改服务端简版配置文件 frps.ini
 
@@ -32,7 +32,7 @@ vhost_gttps_port = 8080
 ./frps -c ./frps.ini
 ~~~
 
-#### 3.FRP客户端配置
+#### 3.FRP客户端配置(内网服务器)
 
 ​	修改客户端简版配置文件frpc.ini
 
